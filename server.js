@@ -1,12 +1,12 @@
 var express = require("express");
 var app = express();
-
-var PORT = 3000;
+//structure to support Heroku dynamic port
+var PORT = process.env.PORT || 3000;
 
 app.get("/", function(req,res) {
     res.send('hello adam')
-})
+});
 
 app.listen(PORT, function() {
     console.log(`listening on ${PORT}`)
-})
+});
