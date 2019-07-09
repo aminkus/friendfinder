@@ -9,6 +9,6 @@ module.exports = function(app) {
 
     app.post("/api/survey", function(req, res) {
         friends.push(req.body);
-        res.json(true);
+        res.json(req.body);
     });
 };
