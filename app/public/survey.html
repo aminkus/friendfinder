@@ -210,14 +210,14 @@
           $("#q10").val()
         ]
       };
-      console.log(newFriend)
 
-      
       $.post("/api/survey", newFriend, function (data) {
-        
-        console.log(data)
+        console.log("post request executed")
+        $("#match-name").text(data.name);
+        $("#match-img").attr('src', data.photo);
+        $("#results-modal").modal("toggle");
+       console.log(data.name)
       });
-      $("#results-modal").modal("toggle");
     });
     
   </script>

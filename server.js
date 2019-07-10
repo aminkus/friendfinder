@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var path = require("path");
 //structure to support Heroku dynamic port
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(express.static("app/public"));
